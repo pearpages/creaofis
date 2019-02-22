@@ -12,6 +12,34 @@ Realizar un pequeño sistema en donde haciendo uso de la siguiente API https://o
 
 ---
 
+## Solution Applied
+
+I have build an architecture with different projects. All modules are **lazy-loaded**.
+
+The whole project is setup in order to be deployed in github in the **docs** folder. I have created different libraries for the ease of reuse.
+
+The app is deployed in: https://pearpages.com/creaofis.
+
+I have focused above all in the architecture which I thought it was the goal of the structure.
+
++ The app is the project **clx-creaofis**.
++ Bussiness models have their own libary **bss-business**.
++ Reusable dummy components are in **cui-ui**
++ Feature Weather Module which uses the prior libraries (bss-business and cui-ui) is **cwe-weather**.
+
+### Things to improve
+
++ Define pending interfaces
++ Create more dummy components
++ More weather widgets
+
+### Vendor
+
++ prettier
++ husky
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 ## Development server
