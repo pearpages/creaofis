@@ -1,0 +1,8 @@
+<mat-toolbar>
+  <span [routerLink]="['/']">Creaofis POC</span>
+  <a mat-button [routerLink]="['/fun']" routerLinkActive="router-link-active">fun</a>
+  <a mat-button [routerLink]="['/weather']" routerLinkActive="router-link-active">weather</a>
+</mat-toolbar>
+<main class="clx-main">
+  <router-outlet></router-outlet>
+</main>

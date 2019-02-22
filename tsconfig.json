@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./docs/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "cui-ui": ["dist/cui-ui"],
+      "cui-ui/*": ["dist/cui-ui/*"],
+      "cwe-weather": ["dist/cwe-weather"],
+      "cwe-weather/*": ["dist/cwe-weather/*"],
+      "bss-business": ["dist/bss-business"],
+      "bss-business/*": ["dist/bss-business/*"]
+    }
+  }
+}

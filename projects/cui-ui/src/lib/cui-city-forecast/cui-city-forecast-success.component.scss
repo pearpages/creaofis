@@ -1,0 +1,14 @@
+.cui-city-forecast-success {
+  font-size: 10px;
+
+  &__title {
+    font-size: 12px;
+  }
+
+  &__info {
+    &-label {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}

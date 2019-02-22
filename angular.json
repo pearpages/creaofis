@@ -1,0 +1,212 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "creaofis": {
+      "root": "projects/clx-creaofis",
+      "sourceRoot": "projects/clx-creaofis/src",
+      "projectType": "application",
+      "prefix": "clx",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "docs",
+            "index": "projects/clx-creaofis/src/index.html",
+            "main": "projects/clx-creaofis/src/main.ts",
+            "polyfills": "projects/clx-creaofis/src/polyfills.ts",
+            "tsConfig": "projects/clx-creaofis/src/tsconfig.app.json",
+            "assets": ["projects/clx-creaofis/src/favicon.ico", "projects/clx-creaofis/src/assets"],
+            "styles": ["projects/clx-creaofis/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/clx-creaofis/src/environments/environment.ts",
+                  "with": "projects/clx-creaofis/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "creaofis:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "creaofis:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "creaofis:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/clx-creaofis/src/test.ts",
+            "polyfills": "projects/clx-creaofis/src/polyfills.ts",
+            "tsConfig": "projects/clx-creaofis/src/tsconfig.spec.json",
+            "karmaConfig": "projects/clx-creaofis/src/karma.conf.js",
+            "styles": ["projects/clx-creaofis/src/styles.scss"],
+            "scripts": [],
+            "assets": ["projects/clx-creaofis/src/favicon.ico", "projects/clx-creaofis/src/assets"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/clx-creaofis/src/tsconfig.app.json", "projects/clx-creaofis/src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "creaofis-e2e": {
+      "root": "projects/clx-creaofis/e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/clx-creaofis/e2e/protractor.conf.js",
+            "devServerTarget": "creaofis:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "creaofis:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/clx-creaofis/e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "cui-ui": {
+      "root": "projects/cui-ui",
+      "sourceRoot": "projects/cui-ui/src",
+      "projectType": "library",
+      "prefix": "cui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cui-ui/tsconfig.lib.json",
+            "project": "projects/cui-ui/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cui-ui/src/test.ts",
+            "tsConfig": "projects/cui-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/cui-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/cui-ui/tsconfig.lib.json", "projects/cui-ui/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "cwe-weather": {
+      "root": "projects/cwe-weather",
+      "sourceRoot": "projects/cwe-weather/src",
+      "projectType": "library",
+      "prefix": "cwe",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cwe-weather/tsconfig.lib.json",
+            "project": "projects/cwe-weather/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cwe-weather/src/test.ts",
+            "tsConfig": "projects/cwe-weather/tsconfig.spec.json",
+            "karmaConfig": "projects/cwe-weather/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/cwe-weather/tsconfig.lib.json", "projects/cwe-weather/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "bss-business": {
+      "root": "projects/bss-business",
+      "sourceRoot": "projects/bss-business/src",
+      "projectType": "library",
+      "prefix": "bss",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/bss-business/tsconfig.lib.json",
+            "project": "projects/bss-business/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bss-business/src/test.ts",
+            "tsConfig": "projects/bss-business/tsconfig.spec.json",
+            "karmaConfig": "projects/bss-business/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/bss-business/tsconfig.lib.json", "projects/bss-business/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "creaofis"
+}
