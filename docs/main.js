@@ -218,7 +218,7 @@ var CuiSnakeComponent = /** @class */ (function () {
     CuiSnakeComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
                     selector: 'cui-snake',
-                    template: "\n    <iframe src=\"https://pearpages.com/games/snake\" width=\"600px\" height=\"600px\" frameborder=\"0\"></iframe>\n  "
+                    template: "\n    <iframe src=\"https://pearpages.com/games/snake/\" width=\"600px\" height=\"600px\" frameborder=\"0\"></iframe>\n  "
                 }] }
     ];
     /** @nocollapse */

@@ -6,7 +6,7 @@
     "start": "run-s build:bss-business build:cui-ui build:cwe-weather serve",
     "serve": "ng serve",
     "serve:build": "run-s build live-server",
-    "live-server": "live-server ./docs",
+    "live-server": "live-server ./docs --mount=/creaofis/:./docs",
     "build": "run-s build:bss-business build:cui-ui build:cwe-weather build:app",
     "build:app": "ng build creaofis",
     "build:cui-ui": "ng build cui-ui",

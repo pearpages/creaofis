@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "docs",
-            "deployUrl": "/creaofis/",
+            "baseHref": "/creaofis/",
             "index": "projects/clx-creaofis/src/index.html",
             "main": "projects/clx-creaofis/src/main.ts",
             "polyfills": "projects/clx-creaofis/src/polyfills.ts",
