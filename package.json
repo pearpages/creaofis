@@ -1,6 +1,6 @@
 {
   "name": "creaofis",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "run-s build:bss-business build:cui-ui build:cwe-weather serve",
