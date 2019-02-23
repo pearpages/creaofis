@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BssBusinessComponent } from './bss-business.component';
 
 @NgModule({
-  declarations: [BssBusinessComponent],
+  declarations: [],
   imports: [],
-  exports: [BssBusinessComponent]
+  exports: []
 })
 export class BssBusinessModule {}

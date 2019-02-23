@@ -73,8 +73,8 @@ export interface WeatherData {
   sys: Sys;
 }
 
-export interface GenericError {
-  message: string;
+export class GenericError {
+  constructor(public message: string) {}
 }
 
 export type WeatherResponse = RemoteData<GenericError, WeatherData>;
