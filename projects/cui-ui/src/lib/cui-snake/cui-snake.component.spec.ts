@@ -21,4 +21,9 @@ describe('CuiSnakeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call to the right url', () => {
+    const iframe = fixture.elementRef.nativeElement.querySelector('iframe');
+    expect(iframe.src).toBe('https://pearpages.com/games/snake/');
+  });
 });

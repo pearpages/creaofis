@@ -6,8 +6,4 @@ import { Component, OnInit } from '@angular/core';
     Component just loaded.
   `
 })
-export class CuiCityForecastNotAskedComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class CuiCityForecastNotAskedComponent {}

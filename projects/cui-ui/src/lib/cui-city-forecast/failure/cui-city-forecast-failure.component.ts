@@ -1,16 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { GenericError } from 'bss-business';
 
 @Component({
   selector: 'cui-city-forecast-failure',
   template: `
-    {{ genericError.message }}
+    {{ genericError?.message }}
   `
 })
-export class CuiCityForecastFailureComponent implements OnInit {
+export class CuiCityForecastFailureComponent {
   @Input() genericError: GenericError;
-  constructor() {}
-
-  ngOnInit() {}
 }

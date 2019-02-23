@@ -6,8 +6,4 @@ import { Component, OnInit } from '@angular/core';
     Fetching data...
   `
 })
-export class CuiCityForecastPendingComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class CuiCityForecastPendingComponent {}
