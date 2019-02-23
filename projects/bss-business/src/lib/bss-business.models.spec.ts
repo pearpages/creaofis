@@ -1,4 +1,13 @@
-import { RemoteDataKind, Success, Failure, Pending, WeatherResponse, WeatherData, GenericError, NotAsked } from "./bss-business.models";
+import {
+  RemoteDataKind,
+  Success,
+  Failure,
+  Pending,
+  WeatherResponse,
+  WeatherData,
+  GenericError,
+  NotAsked
+} from './bss-business.models';
 
 describe('bss-business models', () => {
   let weatherData: WeatherData;
@@ -6,7 +15,7 @@ describe('bss-business models', () => {
     weatherData = {
       coord: {
         lon: 123,
-        lat: 435,
+        lat: 435
       },
       base: 'base',
       visibility: 100,
@@ -33,7 +42,7 @@ describe('bss-business models', () => {
         speed: 1235,
         deg: 164
       },
-      clouds: {all: 235},
+      clouds: { all: 235 },
       sys: {
         type: 244,
         id: 32534,
@@ -44,7 +53,7 @@ describe('bss-business models', () => {
       }
     };
   });
-  it ('should have RemoteData clases', () => {
+  it('should have RemoteData clases', () => {
     const success: WeatherResponse = new Success(weatherData);
     expect(success.value).toEqual(weatherData);
     expect(success.kind).toEqual(RemoteDataKind.Success);

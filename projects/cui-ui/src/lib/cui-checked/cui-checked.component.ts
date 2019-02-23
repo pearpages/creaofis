@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'cui-checked',
@@ -6,10 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
     <input type="checkbox" disabled [checked]="checked" />
   `
 })
-export class CuiCheckedComponent implements OnInit {
-  value: string;
+export class CuiCheckedComponent {
   @Input() checked = 'checked';
-  constructor() {}
-
-  ngOnInit() {}
 }

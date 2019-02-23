@@ -3,21 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { CuiCheckedComponent } from './cui-checked/cui-checked.component';
 import { CuiSnakeComponent } from './cui-snake/cui-snake.component';
-import { CuiCityForecastComponent } from './cui-city-forecast/cui-city-forecast.component';
-import { CuiCityForecastSuccessComponent } from './cui-city-forecast/cui-city-forecast-success.component';
-import { CuiCityForecastFailureComponent } from './cui-city-forecast/cui-city-forecast-failure.component';
-import { CuiCityForecastPendingComponent } from './cui-city-forecast/cui-city-forecast-pending.component';
-import { CuiCityForecastNotAskedComponent } from './cui-city-forecast/cui-city-forecast-not-asked.component';
+import { CUI_CITY_FOREST_COMPONENTS } from './cui-city-forecast';
 
-const exportedComponents = [
-  CuiCheckedComponent,
-  CuiSnakeComponent,
-  CuiCityForecastComponent,
-  CuiCityForecastSuccessComponent,
-  CuiCityForecastPendingComponent,
-  CuiCityForecastFailureComponent,
-  CuiCityForecastNotAskedComponent
-];
+const exportedComponents = [CuiCheckedComponent, CuiSnakeComponent, ...CUI_CITY_FOREST_COMPONENTS];
 
 @NgModule({
   declarations: [...exportedComponents],
