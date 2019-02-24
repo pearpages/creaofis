@@ -2,6 +2,8 @@ import { Action } from '@ngrx/store';
 
 import { WeatherData } from 'bss-business';
 
+export type CweWeatherAction = CweWeatherFetchAction | CweWeatherFetchSuccessAction | CweWeatherFetchFailureAction;
+
 export enum CweWeatherActionTypes {
   FETCH = '[Weather] fetching data',
   FETCH_SUCCESS = '[Weather] fetch succeeded',

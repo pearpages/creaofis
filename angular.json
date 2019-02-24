@@ -136,7 +136,9 @@
           "options": {
             "main": "projects/cui-ui/src/test.ts",
             "tsConfig": "projects/cui-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/cui-ui/karma.conf.js"
+            "karmaConfig": "projects/cui-ui/karma.conf.js",
+            "watch": false,
+            "browsers": "ChromeHeadless"
           }
         },
         "lint": {
@@ -166,6 +168,8 @@
           "options": {
             "main": "projects/cwe-weather/src/test.ts",
             "tsConfig": "projects/cwe-weather/tsconfig.spec.json",
+            "watch": false,
+            "browsers": "ChromeHeadless",
             "karmaConfig": "projects/cwe-weather/karma.conf.js"
           }
         },
@@ -196,7 +200,9 @@
           "options": {
             "main": "projects/bss-business/src/test.ts",
             "tsConfig": "projects/bss-business/tsconfig.spec.json",
-            "karmaConfig": "projects/bss-business/karma.conf.js"
+            "karmaConfig": "projects/bss-business/karma.conf.js",
+            "watch": false,
+            "browsers": "ChromeHeadless"
           }
         },
         "lint": {
