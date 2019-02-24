@@ -1,4 +1,4 @@
-import { WeatherResponse, NotAsked, Pending, GenericError, Failure, Success } from 'bss-business';
+import { WeatherResponse, NotAsked, Pending, GenericError, Failure, Success, weatherDataMock } from 'bss-business';
 
 import { reducer } from './cwe-weather.reducer';
 import {
@@ -6,48 +6,6 @@ import {
   CweWeatherFetchFailureAction,
   CweWeatherFetchSuccessAction
 } from './cwe-weather.actions';
-
-const weatherData = {
-  coord: {
-    lon: 123,
-    lat: 435
-  },
-  base: 'base',
-  visibility: 100,
-  dt: 20,
-  id: 123,
-  name: 'name',
-  cod: 123,
-  weather: [
-    {
-      id: 1231,
-      main: 'main',
-      description: 'description',
-      icon: 'icon'
-    }
-  ],
-  main: {
-    temp: 768,
-    pressure: 456,
-    humidity: 167,
-    temp_min: 4356,
-    temp_max: 6575
-  },
-  wind: {
-    speed: 1235,
-    deg: 164
-  },
-  clouds: { all: 235 },
-  sys: {
-    type: 244,
-    id: 32534,
-    message: 3656,
-    country: 'ES',
-    sunrise: Date.now(),
-    sunset: Date.now()
-  }
-};
-Object.freeze(weatherData);
 
 describe('CweWeatherReducer', () => {
   let state: WeatherResponse;
@@ -63,7 +21,7 @@ describe('CweWeatherReducer', () => {
     expect(newState).toEqual(new Failure(new GenericError('Not Found')));
   });
   it('should return a success object when fetch is successful', () => {
-    const newState = reducer(state, new CweWeatherFetchSuccessAction(weatherData));
-    expect(newState).toEqual(new Success({ ...weatherData }));
+    const newState = reducer(state, new CweWeatherFetchSuccessAction(weatherDataMock));
+    expect(newState).toEqual(new Success({ ...weatherDataMock }));
   });
 });
