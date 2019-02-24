@@ -14,3 +14,5 @@
 
 - Create asynchrnous tests for components
 - Improve deployment
+- Build AOT version
+- Move input field to its own component inside cui-ui

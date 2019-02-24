@@ -184,7 +184,7 @@ var CweWeatherEffects = /** @class */ (function () {
          * @return {?}
          */
         function (action) {
-            return _this.cweWeatherService.getForecastByCityName(action['payload']).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["map"])((/**
+            return _this.cweWeatherService.getForecastByCityName(action.payload).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["map"])((/**
              * @param {?} weatherData
              * @return {?}
              */
@@ -224,9 +224,9 @@ function reducer(state, action) {
         case CweWeatherActionTypes.FETCH:
             return new bss_business__WEBPACK_IMPORTED_MODULE_5__["Pending"]();
         case CweWeatherActionTypes.FETCH_FAILURE:
-            return new bss_business__WEBPACK_IMPORTED_MODULE_5__["Failure"]({ message: action['payload'] });
+            return new bss_business__WEBPACK_IMPORTED_MODULE_5__["Failure"](new bss_business__WEBPACK_IMPORTED_MODULE_5__["GenericError"](action.payload));
         case CweWeatherActionTypes.FETCH_SUCCESS:
-            return new bss_business__WEBPACK_IMPORTED_MODULE_5__["Success"](action['payload']);
+            return new bss_business__WEBPACK_IMPORTED_MODULE_5__["Success"](action.payload);
         default:
             return state;
     }

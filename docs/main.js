@@ -4,64 +4,21 @@
 /*!*********************************************************************************!*\
   !*** /Users/pearpages/Desktop/creaofis/dist/bss-business/fesm5/bss-business.js ***!
   \*********************************************************************************/
-/*! exports provided: BssBusinessService, BssBusinessComponent, BssBusinessModule, RemoteDataKind, NotAsked, Pending, Success, Failure */
+/*! exports provided: BssBusinessModule, RemoteDataKind, NotAsked, Pending, Success, Failure, GenericError, weatherDataMock */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BssBusinessService", function() { return BssBusinessService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BssBusinessComponent", function() { return BssBusinessComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BssBusinessModule", function() { return BssBusinessModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RemoteDataKind", function() { return RemoteDataKind; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotAsked", function() { return NotAsked; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pending", function() { return Pending; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Success", function() { return Success; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Failure", function() { return Failure; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GenericError", function() { return GenericError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "weatherDataMock", function() { return weatherDataMock; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
 
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-var BssBusinessService = /** @class */ (function () {
-    function BssBusinessService() {
-    }
-    BssBusinessService.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"], args: [{
-                    providedIn: 'root'
-                },] }
-    ];
-    /** @nocollapse */
-    BssBusinessService.ctorParameters = function () { return []; };
-    /** @nocollapse */ BssBusinessService.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["defineInjectable"])({ factory: function BssBusinessService_Factory() { return new BssBusinessService(); }, token: BssBusinessService, providedIn: "root" });
-    return BssBusinessService;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-var BssBusinessComponent = /** @class */ (function () {
-    function BssBusinessComponent() {
-    }
-    /**
-     * @return {?}
-     */
-    BssBusinessComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () { };
-    BssBusinessComponent.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
-                    selector: 'bss-bss-business',
-                    template: "\n    <p>\n      bss-business works!\n    </p>\n  "
-                }] }
-    ];
-    /** @nocollapse */
-    BssBusinessComponent.ctorParameters = function () { return []; };
-    return BssBusinessComponent;
-}());
 
 /**
  * @fileoverview added by tsickle
@@ -72,9 +29,9 @@ var BssBusinessModule = /** @class */ (function () {
     }
     BssBusinessModule.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
-                    declarations: [BssBusinessComponent],
+                    declarations: [],
                     imports: [],
-                    exports: [BssBusinessComponent]
+                    exports: []
                 },] }
     ];
     return BssBusinessModule;
@@ -129,6 +86,66 @@ Failure = /** @class */ (function () {
     }
     return Failure;
 }());
+var GenericError = /** @class */ (function () {
+    function GenericError(message) {
+        this.message = message;
+    }
+    return GenericError;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+var weatherData = {
+    coord: {
+        lon: 123,
+        lat: 435
+    },
+    base: 'base',
+    visibility: 100,
+    dt: 20,
+    id: 123,
+    name: 'name',
+    cod: 123,
+    weather: [
+        {
+            id: 1231,
+            main: 'main',
+            description: 'description',
+            icon: 'icon'
+        }
+    ],
+    main: {
+        temp: 768,
+        pressure: 456,
+        humidity: 167,
+        temp_min: 4356,
+        temp_max: 6575
+    },
+    wind: {
+        speed: 1235,
+        deg: 164
+    },
+    clouds: { all: 235 },
+    sys: {
+        type: 244,
+        id: 32534,
+        message: 3656,
+        country: 'ES',
+        sunrise: Date.now(),
+        sunset: Date.now()
+    }
+};
+Object.freeze(weatherData);
+/** @type {?} */
+var weatherDataMock = weatherData;
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 
 /**
  * @fileoverview added by tsickle
@@ -150,18 +167,18 @@ Failure = /** @class */ (function () {
 /*!*********************************************************************!*\
   !*** /Users/pearpages/Desktop/creaofis/dist/cui-ui/fesm5/cui-ui.js ***!
   \*********************************************************************/
-/*! exports provided: CuiUiModule, ɵa, ɵf, ɵg, ɵe, ɵd, ɵc, ɵb */
+/*! exports provided: CuiUiModule, ɵa, ɵc, ɵf, ɵe, ɵg, ɵd, ɵb */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CuiUiModule", function() { return CuiUiModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return CuiCheckedComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return CuiCityForecastFailureComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return CuiCityForecastNotAskedComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return CuiCityForecastPendingComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return CuiCityForecastSuccessComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return CuiCityForecastComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return CuiCityForecastFailureComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return CuiCityForecastNotAskedComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return CuiCityForecastPendingComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return CuiCityForecastSuccessComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return CuiSnakeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "../../node_modules/@angular/common/fesm5/common.js");
@@ -178,23 +195,24 @@ __webpack_require__.r(__webpack_exports__);
  */
 var CuiCheckedComponent = /** @class */ (function () {
     function CuiCheckedComponent() {
-        this.checked = 'checked';
+        this.checked = true;
     }
-    /**
-     * @return {?}
-     */
-    CuiCheckedComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () { };
+    Object.defineProperty(CuiCheckedComponent.prototype, "checkedValue", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            return this.checked ? 'checked' : '';
+        },
+        enumerable: true,
+        configurable: true
+    });
     CuiCheckedComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
                     selector: 'cui-checked',
-                    template: "\n    <input type=\"checkbox\" disabled [checked]=\"checked\" />\n  "
+                    template: "\n    <input type=\"checkbox\" disabled [checked]=\"checkedValue\" />\n  "
                 }] }
     ];
-    /** @nocollapse */
-    CuiCheckedComponent.ctorParameters = function () { return []; };
     CuiCheckedComponent.propDecorators = {
         checked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
     };
@@ -283,22 +301,13 @@ var CuiCityForecastComponent = /** @class */ (function () {
 var CuiCityForecastSuccessComponent = /** @class */ (function () {
     function CuiCityForecastSuccessComponent() {
     }
-    /**
-     * @return {?}
-     */
-    CuiCityForecastSuccessComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () { };
     CuiCityForecastSuccessComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
                     selector: 'cui-city-forecast-success',
-                    template: "\n    <div class=\"cui-city-forecast-success\">\n      <h4 class=\"cui-city-forecast-success__title\">\n        Forecast for {{ weatherData.name }} ({{ weatherData.sys.country }}) ID: {{ weatherData.id }} COD:\n        {{ weatherData.cod }}\n      </h4>\n      <dl class=\"cui-city-forecast-success__info\">\n        <dt class=\"cui-city-forecast-success__info-label\">Coord</dt>\n        <dl>lon: {{ weatherData.coord.lon }}, lat: {{ weatherData.coord.lat }}</dl>\n        <dt class=\"cui-city-forecast-success__info-label\">Weather</dt>\n        <dd>\n          <dl *ngFor=\"let weather of weatherData.weather\">\n            <dt class=\"cui-city-forecast-success__info-label\">id</dt>\n            <dd>{{ weather.id }}</dd>\n            <dt class=\"cui-city-forecast-success__info-label\">main</dt>\n            <dd>{{ weather.main }}</dd>\n            <dt class=\"cui-city-forecast-success__info-label\">description</dt>\n            <dd>{{ weather.description }}</dd>\n            <dt class=\"cui-city-forecast-success__info-label\">icon</dt>\n            <dd>{{ weather.icon }}</dd>\n          </dl>\n        </dd>\n        <dt class=\"cui-city-forecast-success__info-label\">base</dt>\n        <dd>{{ weatherData.base }}</dd>\n        <dt class=\"cui-city-forecast-success__info-label\">main</dt>\n        <dd>\n          <dl>\n            <dt>temp</dt>\n            <dd>{{ weatherData.main.temp }}</dd>\n            <dt>pressure</dt>\n            <dd>{{ weatherData.main.pressure }}</dd>\n            <dt>humidity</dt>\n            <dd>{{ weatherData.main.humidity }}</dd>\n            <dt>temp_min</dt>\n            <dd>{{ weatherData.main.temp_min }}</dd>\n            <dt>temp_max</dt>\n            <dd>{{ weatherData.main.temp_max }}</dd>\n          </dl>\n        </dd>\n        <dt class=\"cui-city-forecast-success__info-label\">visibility</dt>\n        <dd>{{ weatherData.visibility }}</dd>\n        <dt class=\"cui-city-forecast-success__info-label\">wind</dt>\n        <dd>{{ weatherData.wind.speed }}</dd>\n        <dt class=\"cui-city-forecast-success__info-label\">clouds</dt>\n        <dd>{{ weatherData.clouds.all }}</dd>\n        <dt class=\"cui-city-forecast-success__info-label\">dt</dt>\n        <dd>{{ weatherData.dt }}</dd>\n        <dt class=\"cui-city-forecast-success__info-label\">sys</dt>\n        <dd>\n          <dl>\n            <dt>type/id</dt>\n            <dd>{{ weatherData.sys.type }}/{{ weatherData.sys.id }}</dd>\n            <dt>message</dt>\n            <dd>{{ weatherData.sys.message }}</dd>\n            <dt>sunrise</dt>\n            <dd>{{ weatherData.sys.sunrise | date }}</dd>\n            <dt>sunset</dt>\n            <dd>{{ weatherData.sys.sunset | date }}</dd>\n          </dl>\n        </dd>\n      </dl>\n    </div>\n  ",
+                    template: "\n    <div class=\"cui-city-forecast-success\">\n      <ng-container *ngIf=\"weatherData\">\n        <h4 class=\"cui-city-forecast-success__title\">\n          Forecast for {{ weatherData.name }} ({{ weatherData.sys.country }}) ID: {{ weatherData.id }} COD:\n          {{ weatherData.cod }}\n        </h4>\n        <dl class=\"cui-city-forecast-success__info\">\n          <dt class=\"cui-city-forecast-success__info-label\">Coord</dt>\n          <dl>lon: {{ weatherData.coord.lon }}, lat: {{ weatherData.coord.lat }}</dl>\n          <dt class=\"cui-city-forecast-success__info-label\">Weather</dt>\n          <dd>\n            <dl *ngFor=\"let weather of weatherData.weather\">\n              <dt class=\"cui-city-forecast-success__info-label\">id</dt>\n              <dd>{{ weather.id }}</dd>\n              <dt class=\"cui-city-forecast-success__info-label\">main</dt>\n              <dd>{{ weather.main }}</dd>\n              <dt class=\"cui-city-forecast-success__info-label\">description</dt>\n              <dd>{{ weather.description }}</dd>\n              <dt class=\"cui-city-forecast-success__info-label\">icon</dt>\n              <dd>{{ weather.icon }}</dd>\n            </dl>\n          </dd>\n          <dt class=\"cui-city-forecast-success__info-label\">base</dt>\n          <dd>{{ weatherData.base }}</dd>\n          <dt class=\"cui-city-forecast-success__info-label\">main</dt>\n          <dd>\n            <dl>\n              <dt>temp</dt>\n              <dd>{{ weatherData.main.temp }}</dd>\n              <dt>pressure</dt>\n              <dd>{{ weatherData.main.pressure }}</dd>\n              <dt>humidity</dt>\n              <dd>{{ weatherData.main.humidity }}</dd>\n              <dt>temp_min</dt>\n              <dd>{{ weatherData.main.temp_min }}</dd>\n              <dt>temp_max</dt>\n              <dd>{{ weatherData.main.temp_max }}</dd>\n            </dl>\n          </dd>\n          <dt class=\"cui-city-forecast-success__info-label\">visibility</dt>\n          <dd>{{ weatherData.visibility }}</dd>\n          <dt class=\"cui-city-forecast-success__info-label\">wind</dt>\n          <dd>{{ weatherData.wind.speed }}</dd>\n          <dt class=\"cui-city-forecast-success__info-label\">clouds</dt>\n          <dd>{{ weatherData.clouds.all }}</dd>\n          <dt class=\"cui-city-forecast-success__info-label\">dt</dt>\n          <dd>{{ weatherData.dt }}</dd>\n          <dt class=\"cui-city-forecast-success__info-label\">sys</dt>\n          <dd>\n            <dl>\n              <dt>type/id</dt>\n              <dd>{{ weatherData.sys.type }}/{{ weatherData.sys.id }}</dd>\n              <dt>message</dt>\n              <dd>{{ weatherData.sys.message }}</dd>\n              <dt>sunrise</dt>\n              <dd>{{ weatherData.sys.sunrise | date }}</dd>\n              <dt>sunset</dt>\n              <dd>{{ weatherData.sys.sunset | date }}</dd>\n            </dl>\n          </dd>\n        </dl>\n      </ng-container>\n    </div>\n  ",
                     styles: [".cui-city-forecast-success{font-size:10px}.cui-city-forecast-success__title{font-size:12px}.cui-city-forecast-success__info-label{font-size:12px;font-weight:700}"]
                 }] }
     ];
-    /** @nocollapse */
-    CuiCityForecastSuccessComponent.ctorParameters = function () { return []; };
     CuiCityForecastSuccessComponent.propDecorators = {
         weatherData: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
     };
@@ -309,24 +318,31 @@ var CuiCityForecastSuccessComponent = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+var CuiCityForecastNotAskedComponent = /** @class */ (function () {
+    function CuiCityForecastNotAskedComponent() {
+    }
+    CuiCityForecastNotAskedComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
+                    selector: 'cui-city-forecast-not-asked',
+                    template: "\n    Component just loaded.\n  "
+                }] }
+    ];
+    return CuiCityForecastNotAskedComponent;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 var CuiCityForecastFailureComponent = /** @class */ (function () {
     function CuiCityForecastFailureComponent() {
     }
-    /**
-     * @return {?}
-     */
-    CuiCityForecastFailureComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () { };
     CuiCityForecastFailureComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
                     selector: 'cui-city-forecast-failure',
-                    template: "\n    {{ genericError.message }}\n  "
+                    template: "\n    {{ genericError?.message }}\n  "
                 }] }
     ];
-    /** @nocollapse */
-    CuiCityForecastFailureComponent.ctorParameters = function () { return []; };
     CuiCityForecastFailureComponent.propDecorators = {
         genericError: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
     };
@@ -340,21 +356,12 @@ var CuiCityForecastFailureComponent = /** @class */ (function () {
 var CuiCityForecastPendingComponent = /** @class */ (function () {
     function CuiCityForecastPendingComponent() {
     }
-    /**
-     * @return {?}
-     */
-    CuiCityForecastPendingComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () { };
     CuiCityForecastPendingComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
                     selector: 'cui-city-forecast-pending',
                     template: "\n    Fetching data...\n  "
                 }] }
     ];
-    /** @nocollapse */
-    CuiCityForecastPendingComponent.ctorParameters = function () { return []; };
     return CuiCityForecastPendingComponent;
 }());
 
@@ -362,47 +369,20 @@ var CuiCityForecastPendingComponent = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-var CuiCityForecastNotAskedComponent = /** @class */ (function () {
-    function CuiCityForecastNotAskedComponent() {
-    }
-    /**
-     * @return {?}
-     */
-    CuiCityForecastNotAskedComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () { };
-    CuiCityForecastNotAskedComponent.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"], args: [{
-                    selector: 'cui-city-forecast-not-asked',
-                    template: "\n    Component just loaded.\n  "
-                }] }
-    ];
-    /** @nocollapse */
-    CuiCityForecastNotAskedComponent.ctorParameters = function () { return []; };
-    return CuiCityForecastNotAskedComponent;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 /** @type {?} */
-var exportedComponents = [
-    CuiCheckedComponent,
-    CuiSnakeComponent,
-    CuiCityForecastComponent,
-    CuiCityForecastSuccessComponent,
-    CuiCityForecastPendingComponent,
-    CuiCityForecastFailureComponent,
-    CuiCityForecastNotAskedComponent
-];
+var exportedComponents = [CuiCheckedComponent, CuiSnakeComponent, CuiCityForecastComponent];
 var CuiUiModule = /** @class */ (function () {
     function CuiUiModule() {
     }
     CuiUiModule.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"], args: [{
-                    declarations: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(exportedComponents),
+                    declarations: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(exportedComponents, [
+                        CuiCityForecastComponent,
+                        CuiCityForecastSuccessComponent,
+                        CuiCityForecastNotAskedComponent,
+                        CuiCityForecastFailureComponent,
+                        CuiCityForecastPendingComponent
+                    ]),
                     imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
                     exports: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(exportedComponents)
                 },] }
