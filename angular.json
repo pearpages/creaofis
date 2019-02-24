@@ -80,6 +80,8 @@
             "karmaConfig": "projects/clx-creaofis/src/karma.conf.js",
             "styles": ["projects/clx-creaofis/src/styles.scss"],
             "scripts": [],
+            "watch": false,
+            "browsers": "ChromeHeadless",
             "assets": ["projects/clx-creaofis/src/favicon.ico", "projects/clx-creaofis/src/assets"]
           }
         },
